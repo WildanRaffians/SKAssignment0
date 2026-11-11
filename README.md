@@ -1,17 +1,17 @@
-# 🚀 Recruitment Landing Page Section - Sekolah Karir
+# Recruitment Landing Page Section - Sekolah Karir
 
 Sebuah *section recruitment landing page* yang responsif, interaktif, dan berorientasi pada *User Experience* (UX) yang baik. Project ini dibangun sebagai bagian dari *assignment* rekrutmen paid internship di **Sekolah Karir** untuk mendemonstrasikan pemecahan masalah produk, kemampuan eksekusi kode yang bersih (*clean code*), serta pertimbangan arsitektur yang matang.
 
 ---
 
-## 🔗 Live Demo & Preview
+## Live Demo & Preview
 
 - **Live Demo:** []
 - **Repository:** ``
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 1. **Header Navigation (Sticky Navbar):** Logo *brand* Sekolah Karir dan tombol akses profil yang selalu berada di atas layar saat di-*scroll*.
 2. **Dynamic Search & Department Filter:** Pencarian posisi secara *real-time* berdasarkan nama peran serta *filter dropdown* departemen yang diekstrak secara dinamis dari data.
@@ -23,7 +23,7 @@ Sebuah *section recruitment landing page* yang responsif, interaktif, dan berori
 
 ---
 
-## 🛠️ Tech Stack & Alasan Pemilihan
+## Tech Stack & Alasan Pemilihan
 
 - **React.js:** Memungkinkan pembangunan antarmuka berbasis komponen (*component-based architecture*) yang modular, re-usable, serta mempermudah pengelolaan *state* interaktif.
 - **Vite:** Dipilih sebagai *build tool* karena proses inisialisasi yang sangat cepat, *Hot Module Replacement* (HMR) yang instan, serta efisiensi *bundling*.
@@ -31,21 +31,21 @@ Sebuah *section recruitment landing page* yang responsif, interaktif, dan berori
 
 ---
 
-## 🏁 Cara Menjalankan Project
+## Cara Menjalankan Project
 
-### Prasyarat
-Pastikan komputer kamu sudah terinstal [Node.js](https://nodejs.org/) (versi 18 ke atas disarankan).
+### Prasyarat\n
+Pastikan komputer kamu sudah terinstal [Node.js](https://nodejs.org/)
 
 ### Langkah-langkah
 
-1. **Clone Repository / Buka Folder Project**
-   git clone []
+1. **Clone Repository / Buka Folder Project**\n
+   git clone []\n
    cd SKAssignment0
-2. **Install Dependensi**
+2. **Install Dependensi**\n
    npm install
-3. **Jalankan Development Server**
+3. **Jalankan Development Server**\n
    npm run dev
-4. **Buka Aplikasi**
+4. **Buka Aplikasi**\n
    Akses http://localhost:5173 di browser Anda.
 
 ## Keputusan Utama & Reasoning (Key Decisions)
