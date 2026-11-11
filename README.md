@@ -33,12 +33,12 @@ Sebuah *section recruitment landing page* yang responsif, interaktif, dan berori
 
 ## Cara Menjalankan Project
 
-### Prasyarat\n
+### Prasyarat
 Pastikan komputer kamu sudah terinstal [Node.js](https://nodejs.org/)
 
 ### Langkah-langkah
 
-1. **Clone Repository / Buka Folder Project**\n
+1. **Clone Repository / Buka Folder Project**
    git clone []\n
    cd SKAssignment0
 2. **Install Dependensi**\n
@@ -51,41 +51,29 @@ Pastikan komputer kamu sudah terinstal [Node.js](https://nodejs.org/)
 ## Keputusan Utama & Reasoning (Key Decisions)
 1. **Mobile-First & Layout Responsif**
 Pendekatan: Menggunakan kombinasi CSS Grid dan Flexbox bawaan Tailwind CSS (grid-cols-1 md:grid-cols-2 lg:grid-cols-3).
-
 Reasoning: Pada layar perangkat seluler (mobile), role cards ditumpuk secara vertikal untuk menjaga ukuran teks tetap mudah dibaca dan area sentuh (tap target) nyaman digunakan. Pada layar yang lebih lebar, layout secara otomatis beralih menjadi multi-kolom untuk memaksimalkan penggunaan ruang layar (viewport).
 
 2. **Search & Dynamic Filtering (Optimasi Performa)**
 Pencarian Real-time: Pengguna tidak perlu menekan tombol "Cari" secara manual. Data difilter secara instant begitu pengguna mengetik kata kunci.
-
 Dynamic Department Extraction: Daftar pilihan departemen pada select dropdown tidak di-hardcode, melainkan diekstrak secara otomatis dari data pekerjaan menggunakan [...new Set(openRoles.map(...))]. Jika di masa mendatang terdapat departemen baru, sistem filter akan menyesuaikan secara otomatis tanpa perubahan kode.
-
 Memoization (useMemo): Logika penyaringan dibungkus menggunakan hook useMemo. Hal ini memastikan kalkulasi penyaringan hanya dijalankan ulang saat state searchQuery atau filterDepartment berubah, mencegah komputasi berulang yang tidak perlu.
 
 3. **Side Drawer vs Multi-Page Routing**
 Pendekatan: Menggunakan Side Drawer (panel geser kanan) alih-alih berpindah halaman (multi-page routing) untuk menampilkan rincian pekerjaan.
-
 Reasoning:
-
 Mencegah Context Switching: Pengguna dapat membaca detail pekerjaan lalu menutup panel tanpa kehilangan state pencarian atau posisi scroll terakhir.
-
 Efisiensi Scope: Menjaga kompleksitas aplikasi tetap terukur (lightweight) tanpa perlu dependensi routing tambahan seperti react-router-dom.
-
 Adaptabilitas Layout: Pada tampilan mobile, drawer secara otomatis menyesuaikan ukurannya menjadi full-screen sheet, meniru pola navigasi aplikasi native.
 
 4. **End-to-End User Flow (Form Modal & Toast Notification)**
 Penyelesaian Siklus (Funnel): Tombol Call to Action (CTA) seperti "Lamar Posisi Ini" dan "Kirimkan Open Application" dihubungkan langsung ke Form Modal. Ini memastikan tidak ada tombol aksi yang menjadi dead-end (jalan buntu).
-
 Non-Intrusive Toast Feedback:
-
 Posisi Toast diletakkan di tengah-bawah layar (bottom-6 left-1/2 -translate-x-1/2), posisi ideal yang terlihat jelas oleh pengguna tanpa memblokir area konten utama di tengah.
-
 Progress Bar Animation: Indikator visual 7,5 detik menggunakan animasi CSS Keyframe memberikan transparansi (Visibility of System Status) kepada pengguna mengenai berapa lama notifikasi akan tampil.
-
 User Control & Freedom: Dilengkapi tombol manual [X] agar pengguna dapat menutup notifikasi kapan saja jika diinginkan.
 
 5. **Pengelolaan State & Keamanan Memori**
 Pembersihan Timer (useRef): Penggunaan toastTimerRef memastikan bahwa ketika notifikasi ditutup secara manual oleh pengguna (atau saat aplikasi melamar ulang), timeout sebelumnya langsung dibersihkan (cleared). Ini mencegah masalahkebocoran memori (memory leak) atau state update yang tidak terduga di latar belakang.
-
 Reset Animasi (toastKey): Menggunakan state toastKey yang diperbarui setiap kali form dikirimkan, sehingga animasi CSS progress bar di-reset dari 100% secara konsisten meski notifikasi dipanggil berturut-turut.
 
 ## Struktur Folder Project
