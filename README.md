@@ -5,7 +5,7 @@ Sebuah *section recruitment landing page* yang responsif. Project ini dibangun s
 ## Live Demo & Preview
 
 - **Live Demo:** [https://sk-assignment.vercel.app/]
-- **Repository:** `https://github.com/WildanRaffians/SKAssignment0`
+- **Repository:** `https://github.com/WildanRaffians/WildanHafizhRaffianshar_WebDeveloper_SKBatch2`
 
 ## Fitur Utama
 
